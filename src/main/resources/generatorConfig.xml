@@ -14,7 +14,7 @@
         </commentGenerator>
 
         <!--数据库链接地址账号密码-->
-        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/tmall_ssh" userId="root" password="123456">
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver" connectionURL="jdbc:mysql://localhost/tmall_ssm" userId="root" password="">
         </jdbcConnection>
 
         <!--不知道做什么用的。。。反正贴上来了~-->
