@@ -4,10 +4,10 @@
 <nav class="top ">
 	<a href="${contextPath}">
 		<span style="color:#C40000;margin:0px" class=" glyphicon glyphicon-home redColor"></span>
-		天猫首页
+		爱购网
 	</a>
 
-	<span>喵，欢迎来天猫</span>
+	<span>喵，欢迎来爱购</span>
 
 	<c:if test="${!empty user}">
 		<a href="loginPage">${user.name}</a>

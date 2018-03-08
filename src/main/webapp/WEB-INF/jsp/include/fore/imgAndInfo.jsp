@@ -163,7 +163,7 @@
             </div>
             <div class="productPriceDiv">
                 <div class="gouwujuanDiv"><img height="16px" src="img/site/gouwujuan.png">
-                    <span> 爱购实物商品通用</span>
+                    <span> 全爱购实物商品通用</span>
 
                 </div>
                 <div class="originalDiv">

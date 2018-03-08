@@ -62,7 +62,7 @@
             });
 
             $("div#footer a[href$=#nowhere]").click(function(){
-                alert("模仿天猫的连接，并没有跳转到实际的页面");
+                alert("模仿其他商城的连接，并没有跳转到实际的页面");
             });
 
 

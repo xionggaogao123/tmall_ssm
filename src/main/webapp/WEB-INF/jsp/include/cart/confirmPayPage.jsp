@@ -57,7 +57,7 @@
             </tr>
             <tr>
                 <td>卖家昵称：</td>
-                <td>天猫商铺 <span class="confirmPayOrderDetailWangWangGif"></span></td>
+                <td>爱购商铺 <span class="confirmPayOrderDetailWangWangGif"></span></td>
             </tr>
             <tr>
                 <td>收货信息： </td>
