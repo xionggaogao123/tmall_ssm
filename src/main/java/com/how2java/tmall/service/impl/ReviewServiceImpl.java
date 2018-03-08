@@ -12,8 +12,10 @@ import com.how2java.tmall.service.UserService;
 
 @Service
 public class ReviewServiceImpl implements ReviewService {
+
     @Autowired
     ReviewMapper reviewMapper;
+
     @Autowired
     UserService userService;
 
@@ -37,6 +39,7 @@ public class ReviewServiceImpl implements ReviewService {
         return reviewMapper.selectByPrimaryKey(id);
     }
 
+    @Override
     public List<Review> list(int pid){
         ReviewExample example =new ReviewExample();
         example.createCriteria().andPidEqualTo(pid);

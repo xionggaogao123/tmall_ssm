@@ -16,10 +16,11 @@ import com.how2java.tmall.service.PropertyService;
 import com.how2java.tmall.util.Page;
 
 @Controller
-@RequestMapping("")
 public class PropertyController {
+
     @Autowired
     CategoryService categoryService;
+
     @Autowired
     PropertyService propertyService;
 

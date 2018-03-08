@@ -16,8 +16,10 @@ import com.how2java.tmall.service.ProductService;
 
 @Service
 public class OrderItemServiceImpl implements OrderItemService {
+
     @Autowired
     OrderItemMapper orderItemMapper;
+
     @Autowired
     ProductService productService;
 

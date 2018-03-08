@@ -18,7 +18,6 @@ import com.how2java.tmall.util.Page;
 
 
 @Controller
-@RequestMapping("")
 public class OrderController {
 
     @Autowired

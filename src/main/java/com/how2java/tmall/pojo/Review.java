@@ -3,6 +3,7 @@ package com.how2java.tmall.pojo;
 import java.util.Date;
 
 public class Review {
+
     private Integer id;
 
     private String content;

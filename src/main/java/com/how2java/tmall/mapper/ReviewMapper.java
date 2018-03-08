@@ -5,6 +5,7 @@ import com.how2java.tmall.pojo.ReviewExample;
 import java.util.List;
 
 public interface ReviewMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(Review record);

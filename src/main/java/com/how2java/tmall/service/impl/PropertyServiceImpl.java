@@ -15,6 +15,7 @@ import java.util.List;
 
 @Service
 public class PropertyServiceImpl implements PropertyService {
+
     @Autowired
     PropertyMapper propertyMapper;
 

@@ -18,10 +18,11 @@ import com.how2java.tmall.service.ProductService;
 import com.how2java.tmall.util.Page;
 
 @Controller
-@RequestMapping("")
 public class ProductController {
+
     @Autowired
     CategoryService categoryService;
+
     @Autowired
     ProductService productService;
 

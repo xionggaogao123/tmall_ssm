@@ -15,8 +15,8 @@ import com.how2java.tmall.util.Page;
 
 
 @Controller
-@RequestMapping("")
 public class UserController {
+
     @Autowired
     UserService userService;
  

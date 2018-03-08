@@ -5,6 +5,7 @@ import com.how2java.tmall.pojo.ProductImageExample;
 import java.util.List;
 
 public interface ProductImageMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(ProductImage record);

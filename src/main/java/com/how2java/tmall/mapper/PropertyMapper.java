@@ -5,6 +5,7 @@ import com.how2java.tmall.pojo.PropertyExample;
 import java.util.List;
 
 public interface PropertyMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(Property record);

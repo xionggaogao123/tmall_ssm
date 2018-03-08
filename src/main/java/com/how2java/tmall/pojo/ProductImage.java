@@ -1,6 +1,7 @@
 package com.how2java.tmall.pojo;
 
 public class ProductImage {
+
     private Integer id;
 
     private Integer pid;

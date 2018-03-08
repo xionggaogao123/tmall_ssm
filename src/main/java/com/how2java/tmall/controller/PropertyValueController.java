@@ -13,10 +13,11 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
 public class PropertyValueController {
+
     @Autowired
     PropertyValueService propertyValueService;
+
     @Autowired
     ProductService productService;
 

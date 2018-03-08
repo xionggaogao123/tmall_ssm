@@ -11,8 +11,11 @@ public interface OrderItemService {
     void add(OrderItem c);
 
     void delete(int id);
+
     void update(OrderItem c);
+
     OrderItem get(int id);
+
     List list();
 
     void fill(List<Order> os);

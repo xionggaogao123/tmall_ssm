@@ -21,7 +21,6 @@ import java.util.Date;
 import java.util.List;
 
 @Controller
-@RequestMapping("")
 public class ForeController {
 
     @Autowired
@@ -316,10 +315,11 @@ public class ForeController {
         return "fore/payed";
     }
 
+    //我的订单 接口,这里有个Bug,状态写死了
     @RequestMapping("forebought")
     public String bought(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
-        List<Order> os = orderService.list(user.getId(), OrderService.delete);
+        List<Order> os = orderService.list(user.getId(), OrderService.waitDelivery);
         orderItemService.fill(os);
         model.addAttribute("os", os);
         return "fore/bought";

@@ -18,8 +18,10 @@ import com.how2java.tmall.service.CategoryService;
 import com.how2java.tmall.service.OrderItemService;
  
 public class OtherInterceptor extends HandlerInterceptorAdapter {
+
     @Autowired
     CategoryService categoryService;
+
     @Autowired
     OrderItemService orderItemService;
      /**
@@ -33,10 +35,9 @@ public class OtherInterceptor extends HandlerInterceptorAdapter {
      *    从最后一个拦截器往回执行所有的postHandle()
      *    接着再从最后一个拦截器往回执行所有的afterCompletion()
      */
-    public boolean preHandle(HttpServletRequest request,
-                             HttpServletResponse response, Object handler) throws Exception {
+     @Override
+    public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
     	return true;
-
     }
  
     /**
@@ -44,6 +45,7 @@ public class OtherInterceptor extends HandlerInterceptorAdapter {
      * 可在modelAndView中加入数据，比如当前时间
      */
 
+    @Override
     public void postHandle(HttpServletRequest request,
             HttpServletResponse response, Object handler,    
             ModelAndView modelAndView) throws Exception {
@@ -75,7 +77,8 @@ public class OtherInterceptor extends HandlerInterceptorAdapter {
      *   
      * 当有拦截器抛出异常时,会从当前拦截器往回执行所有的拦截器的afterCompletion()  
      */
-     
+
+    @Override
     public void afterCompletion(HttpServletRequest request,    
             HttpServletResponse response, Object handler, Exception ex)  
     throws Exception {  

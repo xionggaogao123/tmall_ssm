@@ -18,14 +18,19 @@ import com.how2java.tmall.service.ProductService;
 import com.how2java.tmall.service.ReviewService;
 @Service
 public class ProductServiceImpl implements ProductService {
+
     @Autowired
     ProductMapper productMapper;
+
     @Autowired
     CategoryService categoryService;
+
     @Autowired
     ProductImageService productImageService;
+
     @Autowired
     OrderItemService orderItemService;
+
     @Autowired
     ReviewService reviewService;
 
@@ -54,8 +59,9 @@ public class ProductServiceImpl implements ProductService {
 
 
     public void setCategory(List<Product> ps){
-        for (Product p : ps)
+        for (Product p : ps){
             setCategory(p);
+        }
     }
     public void setCategory(Product p){
         int cid = p.getCid();

@@ -50,8 +50,9 @@ public class PropertyValueServiceImpl implements PropertyValueService {
         PropertyValueExample example = new PropertyValueExample();
         example.createCriteria().andPtidEqualTo(ptid).andPidEqualTo(pid);
         List<PropertyValue> pvs= propertyValueMapper.selectByExample(example);
-        if (pvs.isEmpty())
+        if (pvs.isEmpty()){
             return null;
+        }
         return pvs.get(0);
     }
 

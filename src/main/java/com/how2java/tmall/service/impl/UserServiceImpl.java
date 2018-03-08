@@ -12,6 +12,7 @@ import com.how2java.tmall.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {
+
     @Autowired
     UserMapper userMapper;
 
@@ -35,8 +36,9 @@ public class UserServiceImpl implements UserService {
         return userMapper.selectByPrimaryKey(id);
     }
 
-    public List<User> list(){
-        UserExample example =new UserExample();
+    @Override
+    public List<User> list() {
+        UserExample example = new UserExample();
         example.setOrderByClause("id desc");
         return userMapper.selectByExample(example);
 
@@ -44,24 +46,22 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public boolean isExist(String name) {
-        UserExample example =new UserExample();
+        UserExample example = new UserExample();
         example.createCriteria().andNameEqualTo(name);
-        List<User> result= userMapper.selectByExample(example);
-        if(!result.isEmpty())
-            return true;
-        return false;
+        List<User> result = userMapper.selectByExample(example);
+        return !result.isEmpty();
 
     }
 
     @Override
     public User get(String name, String password) {
-        UserExample example =new UserExample();
+        UserExample example = new UserExample();
         example.createCriteria().andNameEqualTo(name).andPasswordEqualTo(password);
-        List<User> result= userMapper.selectByExample(example);
-        if(result.isEmpty())
+        List<User> result = userMapper.selectByExample(example);
+        if (result.isEmpty()) {
             return null;
+        }
         return result.get(0);
     }
-
 
 }

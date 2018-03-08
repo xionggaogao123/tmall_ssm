@@ -5,6 +5,7 @@ import com.how2java.tmall.pojo.OrderItemExample;
 import java.util.List;
 
 public interface OrderItemMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(OrderItem record);

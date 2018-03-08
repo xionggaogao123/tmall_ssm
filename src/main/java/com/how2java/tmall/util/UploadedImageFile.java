@@ -3,6 +3,7 @@ package com.how2java.tmall.util;
 import org.springframework.web.multipart.MultipartFile;
  
 public class UploadedImageFile {
+
     MultipartFile image;
  
     public MultipartFile getImage() {

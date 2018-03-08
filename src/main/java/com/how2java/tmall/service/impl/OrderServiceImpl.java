@@ -17,11 +17,13 @@ import java.util.List;
 
 @Service
 public class OrderServiceImpl implements OrderService {
+
     @Autowired
     OrderMapper orderMapper;
 
     @Autowired
     UserService userService;
+
     @Autowired
     OrderItemService orderItemService;
 
@@ -39,8 +41,9 @@ public class OrderServiceImpl implements OrderService {
         float total = 0;
         add(o);
 
-        if(false)
+        if(false){
             throw new RuntimeException();
+        }
 
         for (OrderItem oi: ois) {
             oi.setOid(o.getId());
@@ -65,6 +68,7 @@ public class OrderServiceImpl implements OrderService {
         return orderMapper.selectByPrimaryKey(id);
     }
 
+    @Override
     public List<Order> list(){
         OrderExample example =new OrderExample();
         example.setOrderByClause("id desc");

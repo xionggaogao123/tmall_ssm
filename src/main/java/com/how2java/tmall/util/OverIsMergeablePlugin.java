@@ -8,6 +8,7 @@ import java.lang.reflect.Field;
 import java.util.List;
 
 public class OverIsMergeablePlugin extends PluginAdapter {
+
 	@Override
 	public boolean validate(List<String> warnings) {
 		return true;

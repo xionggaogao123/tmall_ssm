@@ -23,8 +23,8 @@ import com.how2java.tmall.util.UploadedImageFile;
 
 
 @Controller
-@RequestMapping("")
 public class ProductImageController {
+
     @Autowired
     ProductService productService;
 

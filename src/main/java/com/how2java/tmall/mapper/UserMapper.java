@@ -5,6 +5,7 @@ import com.how2java.tmall.pojo.UserExample;
 import java.util.List;
 
 public interface UserMapper {
+
     int deleteByPrimaryKey(Integer id);
 
     int insert(User record);
@@ -18,4 +19,5 @@ public interface UserMapper {
     int updateByPrimaryKeySelective(User record);
 
     int updateByPrimaryKey(User record);
+
 }
