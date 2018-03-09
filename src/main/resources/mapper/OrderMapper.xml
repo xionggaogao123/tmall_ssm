@@ -80,6 +80,15 @@
     where id = #{id,jdbcType=INTEGER}
   </select>
 
+  <select id="listOrderExcludedStatus" parameterType="java.util.Map" resultMap="BaseResultMap">
+
+    SELECT
+    <include refid="Base_Column_List" />
+    FROM order_
+    WHERE uid = #{uid} AND status != #{status,jdbcType=VARCHAR}
+
+  </select>
+
 
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from order_
@@ -242,5 +251,9 @@
       status = #{status,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+
+
+
+
 
 </mapper>

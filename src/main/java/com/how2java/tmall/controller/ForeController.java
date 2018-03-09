@@ -14,6 +14,7 @@ import org.springframework.web.util.HtmlUtils;
 import tmall.comparator.*;
 
 import javax.servlet.http.HttpSession;
+import javax.swing.*;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -319,7 +320,8 @@ public class ForeController {
     @RequestMapping("forebought")
     public String bought(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
-        List<Order> os = orderService.list(user.getId(), OrderService.waitDelivery);
+
+        List<Order> os = orderService.listOrderExcludedStatus(user.getId(), OrderService.delete);
         orderItemService.fill(os);
         model.addAttribute("os", os);
         return "fore/bought";

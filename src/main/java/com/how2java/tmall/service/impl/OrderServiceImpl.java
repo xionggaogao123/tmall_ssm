@@ -12,7 +12,9 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 
 @Service
@@ -77,11 +79,14 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-    public List list(int uid, String excludedStatus) {
-        OrderExample example = new OrderExample();
+    public List listOrderExcludedStatus(int uid, String excludedStatus) {
+   /*  OrderExample   OrderExample example = new OrderExample();
         example.createCriteria().andUidEqualTo(uid).andStatusEqualTo(excludedStatus);
-        example.setOrderByClause("id desc");
-        return orderMapper.selectByExample(example);
+        example.setOrderByClause("id desc");*/
+        Map map = new HashMap();
+        map.put("uid", uid);
+        map.put("status", excludedStatus);
+        return orderMapper.listOrderExcludedStatus(map);
     }
 
 

@@ -31,5 +31,6 @@ public interface OrderService {
 
     List list();
 
-    List list(int uid,String excludedStatus);
+    //获取 所有的 订单
+    List listOrderExcludedStatus(int uid,String excludedStatus);
 }
