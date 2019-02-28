@@ -67,8 +67,6 @@ public class ForeController {
         if (exist) {
             String m = "用户名已经被使用,不能使用";
             model.addAttribute("msg", m);
-
-
             return "fore/register";
         }
         userService.add(user);
@@ -220,7 +218,6 @@ public class ForeController {
             total += oi.getProduct().getPromotePrice() * oi.getNumber();
             ois.add(oi);
         }
-
         session.setAttribute("ois", ois);
         model.addAttribute("total", total);
         return "fore/buy";

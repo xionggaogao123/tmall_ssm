@@ -7,7 +7,6 @@ import com.how2java.tmall.pojo.OrderItem;
 
 public interface OrderItemService {
 
-
     void add(OrderItem c);
 
     void delete(int id);

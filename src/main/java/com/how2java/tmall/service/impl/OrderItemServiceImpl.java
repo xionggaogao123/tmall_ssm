@@ -49,7 +49,6 @@ public class OrderItemServiceImpl implements OrderItemService {
         OrderItemExample example =new OrderItemExample();
         example.setOrderByClause("id desc");
         return orderItemMapper.selectByExample(example);
-
     }
 
     @Override
@@ -96,8 +95,6 @@ public class OrderItemServiceImpl implements OrderItemService {
         o.setTotal(total);
         o.setTotalNumber(totalNumber);
         o.setOrderItems(ois);
-
-
     }
 
     public void setProduct(List<OrderItem> ois){

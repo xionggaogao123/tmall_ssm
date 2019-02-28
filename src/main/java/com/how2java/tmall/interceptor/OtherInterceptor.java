@@ -1,21 +1,18 @@
 package com.how2java.tmall.interceptor;
-import java.util.Arrays;
-import java.util.List;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
-import org.apache.commons.lang.StringUtils;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
 
 import com.how2java.tmall.pojo.Category;
 import com.how2java.tmall.pojo.OrderItem;
 import com.how2java.tmall.pojo.User;
 import com.how2java.tmall.service.CategoryService;
 import com.how2java.tmall.service.OrderItemService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+import java.util.List;
  
 public class OtherInterceptor extends HandlerInterceptorAdapter {
 
@@ -24,6 +21,8 @@ public class OtherInterceptor extends HandlerInterceptorAdapter {
 
     @Autowired
     OrderItemService orderItemService;
+
+
      /**
      * 在业务处理器处理请求之前被调用
      * 如果返回false

@@ -96,9 +96,7 @@ public class ProductImageController {
             imageFile.delete();
         }
 
-
         productImageService.delete(id);
-
 
         return "redirect:admin_productImage_list?pid="+pi.getPid();
     }
@@ -108,7 +106,6 @@ public class ProductImageController {
         Product p =productService.get(pid);
         List<ProductImage> pisSingle = productImageService.list(pid, ProductImageService.type_single);
         List<ProductImage> pisDetail = productImageService.list(pid, ProductImageService.type_detail);
-
 
         model.addAttribute("p", p);
         model.addAttribute("pisSingle", pisSingle);

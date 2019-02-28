@@ -60,7 +60,6 @@ public class ProductController {
 
         PageHelper.offsetPage(page.getStart(),page.getCount());
         List<Product> ps = productService.list(cid);
-
         int total = (int) new PageInfo<>(ps).getTotal();
         page.setTotal(total);
         page.setParam("&cid="+c.getId());

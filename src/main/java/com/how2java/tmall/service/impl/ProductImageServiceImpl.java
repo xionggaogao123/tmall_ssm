@@ -29,7 +29,6 @@ public class ProductImageServiceImpl implements ProductImageService {
     @Override
     public void update(ProductImage pi) {
         productImageMapper.updateByPrimaryKeySelective(pi);
-
     }
 
     @Override
