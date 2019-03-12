@@ -104,7 +104,6 @@
                         <a class="wangwanglink" href="#nowhere">
                             <div class="orderItemWangWangGif"></div>
                         </a>
-
                     </td>
                     <td class="orderItemDeleteTD">
                         <a class="deleteOrderLink" oid="${o.id}" href="#nowhere">
