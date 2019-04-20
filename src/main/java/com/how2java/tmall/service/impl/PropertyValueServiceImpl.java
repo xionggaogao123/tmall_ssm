@@ -25,9 +25,7 @@ public class PropertyValueServiceImpl implements PropertyValueService {
 
     @Override
     public void init(Product p) {
-
         List<Property> pts = propertyService.list(p.getCid());
-
         for (Property pt: pts) {
             PropertyValue pv = get(pt.getId(),p.getId());
             if(null==pv){
@@ -37,7 +35,6 @@ public class PropertyValueServiceImpl implements PropertyValueService {
                 propertyValueMapper.insert(pv);
             }
         }
-
     }
 
     @Override

@@ -50,7 +50,6 @@ public class UserServiceImpl implements UserService {
         example.createCriteria().andNameEqualTo(name);
         List<User> result = userMapper.selectByExample(example);
         return !result.isEmpty();
-
     }
 
     @Override

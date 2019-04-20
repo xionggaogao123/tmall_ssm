@@ -63,22 +63,21 @@ public class ForeController {
         name = HtmlUtils.htmlEscape(name);
         user.setName(name);
         boolean exist = userService.isExist(name);
-
         if (exist) {
             String m = "用户名已经被使用,不能使用";
             model.addAttribute("msg", m);
             return "fore/register";
         }
         userService.add(user);
-
         return "redirect:registerSuccessPage";
     }
 
     @RequestMapping("forelogin")
-    public String login(@RequestParam("name") String name, @RequestParam("password") String password, Model model, HttpSession session) {
+    public String login(@RequestParam("name") String name,
+                        @RequestParam("password") String password,
+                        Model model, HttpSession session) {
         name = HtmlUtils.htmlEscape(name);
         User user = userService.get(name, password);
-
         if (null == user) {
             model.addAttribute("msg", "账号密码错误");
             return "fore/login";
@@ -223,6 +222,15 @@ public class ForeController {
         return "fore/buy";
     }
 
+
+    /**
+     * 添加进购物车
+     * @param pid
+     * @param num
+     * @param model
+     * @param session
+     * @return
+     */
     @RequestMapping("foreaddCart")
     @ResponseBody
     public String addCart(int pid, int num, Model model, HttpSession session) {
@@ -239,7 +247,6 @@ public class ForeController {
                 break;
             }
         }
-
         if (!found) {
             OrderItem oi = new OrderItem();
             oi.setUid(user.getId());
@@ -265,7 +272,6 @@ public class ForeController {
         if (null == user){
             return "fail";
         }
-
         List<OrderItem> ois = orderItemService.listByUser(user.getId());
         for (OrderItem oi : ois) {
             if (oi.getProduct().getId() == pid) {
@@ -317,7 +323,6 @@ public class ForeController {
     @RequestMapping("forebought")
     public String bought(Model model, HttpSession session) {
         User user = (User) session.getAttribute("user");
-
         List<Order> os = orderService.listOrderExcludedStatus(user.getId(), OrderService.delete);
         orderItemService.fill(os);
         model.addAttribute("os", os);

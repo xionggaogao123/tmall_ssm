@@ -9,7 +9,6 @@
         $("span.errorMessage").html("${msg}");
         $("div.loginErrorMessageDiv").show();
         </c:if>
-
         $("form.loginForm").submit(function(){
             if(0==$("#name").val().length||0==$("#password").val().length){
                 $("span.errorMessage").html("请输入账号密码");
@@ -18,12 +17,9 @@
             }
             return true;
         });
-
         $("form.loginForm input").keyup(function(){
             $("div.loginErrorMessageDiv").hide();
         });
-
-
 
         var left = window.innerWidth/2+162;
         $("div.loginSmallDiv").css("left",left);

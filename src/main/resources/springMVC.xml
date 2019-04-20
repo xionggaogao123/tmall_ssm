@@ -38,4 +38,5 @@
             <bean class="com.how2java.tmall.interceptor.OtherInterceptor"/>
         </mvc:interceptor>
     </mvc:interceptors>
+
 </beans>

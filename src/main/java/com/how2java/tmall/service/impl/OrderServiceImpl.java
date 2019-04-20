@@ -40,11 +40,9 @@ public class OrderServiceImpl implements OrderService {
     public float add(Order o, List<OrderItem> ois) {
         float total = 0;
         add(o);
-
         if(false){
             throw new RuntimeException();
         }
-
         for (OrderItem oi: ois) {
             oi.setOid(o.getId());
             orderItemService.update(oi);
@@ -78,9 +76,6 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     public List listOrderExcludedStatus(int uid, String excludedStatus) {
-   /*  OrderExample   OrderExample example = new OrderExample();
-        example.createCriteria().andUidEqualTo(uid).andStatusEqualTo(excludedStatus);
-        example.setOrderByClause("id desc");*/
         Map map = new HashMap();
         map.put("uid", uid);
         map.put("status", excludedStatus);

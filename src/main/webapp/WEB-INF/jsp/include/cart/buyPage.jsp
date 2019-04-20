@@ -8,6 +8,7 @@
             <img class="pull-right" src="img/site/buyflow.png">
             <div style="clear:both"></div>
         </div>
+
         <div class="address">
             <div class="addressTip">输入收货地址</div>
             <div>
@@ -15,7 +16,6 @@
                 <table class="addressTable">
                     <tr>
                         <td class="firstColumn">详细地址<span class="redStar">*</span></td>
-
                         <td><textarea name="address" placeholder="建议您如实填写详细收货地址，例如接到名称，门牌好吗，楼层和房间号等信息"></textarea></td>
                     </tr>
                     <tr>
@@ -31,9 +31,7 @@
                         <td><input name="mobile"  placeholder="请输入11位手机号码" type="text"></td>
                     </tr>
                 </table>
-
             </div>
-
         </div>
         <div class="productList">
             <div class="productListTip">确认订单信息</div>

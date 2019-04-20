@@ -91,6 +91,7 @@
     </div>
 
     <div class="orderListItem">
+
         <c:forEach items="${os}" var="o">
             <table class="orderListItemTable" orderStatus="${o.status}" oid="${o.id}">
                 <tr class="orderListItemFirstTR">
@@ -155,9 +156,7 @@
                                 <c:if test="${o.status=='waitDelivery' }">
                                     <span>待发货</span>
                                     <%--                                     <button class="btn btn-info btn-sm ask2delivery" link="admin_order_delivery?id=${o.id}">催卖家发货</button> --%>
-
                                 </c:if>
-
                                 <c:if test="${o.status=='waitReview' }">
                                     <a href="forereview?oid=${o.id}">
                                         <button  class="orderListItemReview">评价</button>
